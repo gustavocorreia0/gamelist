@@ -2,7 +2,7 @@ package com.gulari.gamelist.dto;
 
 import com.gulari.gamelist.entities.Game;
 
-public class GameDTO {
+public class GameMinDTO {
 
 	private Long id;
 	private String title;
@@ -10,11 +10,11 @@ public class GameDTO {
 	private String imgUrl;
 	private String shortDescription;
 	
-	public GameDTO() {
+	public GameMinDTO() {
 		
 	}
 
-	public GameDTO(Game entity) {
+	public GameMinDTO(Game entity) {
 		super();
 		id = entity.getId();
 		title = entity.getTitle();
