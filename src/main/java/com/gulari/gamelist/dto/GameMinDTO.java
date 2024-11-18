@@ -1,6 +1,7 @@
 package com.gulari.gamelist.dto;
 
 import com.gulari.gamelist.entities.Game;
+import com.gulari.gamelist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -14,7 +15,14 @@ public class GameMinDTO {
 	}
 
 	public GameMinDTO(Game entity) {
-		super();
+		id = entity.getId();
+		title = entity.getTitle();
+		year = entity.getYear();
+		imgUrl = entity.getImgUrl();
+		shortDescription = entity.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection entity) {
 		id = entity.getId();
 		title = entity.getTitle();
 		year = entity.getYear();
